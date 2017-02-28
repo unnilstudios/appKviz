@@ -1,0 +1,38 @@
+* {box-sizing: border-box}
+
+	.container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.box {
+		min-width: 320px;
+	}
+
+	#lista {
+		height: 150px;
+		border: 1px solid black;
+		padding: 20px 30px;
+		list-style-type: decimal;
+		position: relative;
+
+	}
+
+	.delete {
+		position: absolute;
+		right: 20px;
+	}
+
+	.container-slider {
+  		width: 100%;
+  		background-color: #ddd;
+}
+	#slider {
+		width: 0%; 
+		background-color: #4CAF50;
+		text-align: right;
+  		padding-right: 20px;
+  		line-height: 40px;
+  		color: white;
+  		border: 1px solid gray;
+	}

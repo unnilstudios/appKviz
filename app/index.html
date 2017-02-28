@@ -3,30 +3,31 @@
 <head>
     <meta charset="utf-8" />
  	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>Test FrontEnd zadatak | gecko.rs</title>
+    <title>Test Zadatak</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="import" href="drugi.html">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<div class="wrapper">
-	<h2>Oblast: Istok Srbije <span>Vreme: </span></h2>
-	<input>
-	<button>Dodaj u listu</button>
-    <h3>test</h3>
-</div>
-
-<script>
-
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        myObj = JSON.parse(this.responseText);
-        document.getElementById("demo").innerHTML = myObj.name;
-    }
-};
-xmlhttp.open("GET", "podaci.json", true);
-xmlhttp.send();
-
-</script>
+    <div class="container">
+        <div class="box">
+            <h1 id="h1">aplikacija</h1>
+            <p id="demo"></p>
+            <p>Vreme ostalo: <span id="time">02:00 minuta</span></p>
+            <input type="text" autofocus="true" name="autofocus sample" placeholder="ukucaj grad" id="autocomplete-input"></input>
+            <ul id="autocomplete-results">
+            </ul>
+            <button id="dodaj">Dodaj u listu</button>
+        </div>
+        <div class="box">
+            <p>Lista gradova: </p>
+            <ul id="lista">
+                </ul>
+            <button id="kraj">zavrsi igru</button>
+        </div>
+    </div><!--end of container-->
 </body>
+<script src="js/main.js"></script>
+
 </html>
